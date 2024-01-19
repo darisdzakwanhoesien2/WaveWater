@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="account-detail_styles.css">
+    <title>Pear</title>
+</head>
+<body>
+    <main>
+        <h1 class="title">Help us find out<br><span style="color: #94BBD3;"> what you want most</span></h1>
+        <div class="row">
+            <div class="column left" style="background-color:rgb(255, 255, 255);">
+                <img src="../../statics/account-details.png">
+            </div>
+            <div class="column right" style="background-color:#ffffff;">
+                <form class="login" action="/submit-account-detail" method="post">
+                    <div>
+                        <!-- <input type="text" id="field" name="field" placeholder="Field of Interest" required> -->
+                        <select id="field" name="fieldOfInterest">
+                            <option value="">Select your Field of Interest</option>
+                            <option value="computer">computer</option>
+                            <option value="medical">medical</option>
+                        </select>
+                    </div>
+        
+                    <div>
+                        <!-- <input type="region" id="region" name="region" placeholder="region" required> -->
+                        <select id="region" name="region" onchange="updateCountries()">
+                            <option value="">Select Region</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <!-- Add more regions as needed -->
+                        </select>
+                    </div>
+                    <div>
+                        <select id="country" name="country"></select>
+                    </div>
+
+                    <button class="submit" type="submit">start your jouney!</button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        function updateCountries() {
+            var regionSelect = document.getElementById("region");
+            var countrySelect = document.getElementById("country");
+
+            var countryOptions = {
+                "default": ["Select Country", "Finland", "New Zealand", "China", "Japan", "Korea", "India", "Indonesia"],
+                "asia": ["China", "Japan", "Korea", "India", "Indonesia"],
+                "europe": ["France", "Germany", "Italy", "Spain", "United Kingdom"],
+            };
+
+            countrySelect.innerHTML = "";
+            var selectedRegion = regionSelect.value.toLowerCase();
+            var countries = countryOptions[selectedRegion] || countryOptions["default"];
+            for (var i = 0; i < countries.length; i++) {
+                var option = document.createElement("option");
+                option.text = countries[i];
+                countrySelect.add(option);
+            }
+        }
+
+        window.onload = updateCountries;
+    </script>
+
+</body>
+</html>

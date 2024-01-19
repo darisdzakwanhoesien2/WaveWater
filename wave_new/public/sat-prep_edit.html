@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="sat-prep_styles.css">
+  <link rel="icon" type="image/png" href="../../statics/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <title>SAT - Pear</title>
+</head>
+
+<body>
+  <div id="details" class="content"></div>
+  <main>
+  <div class="row">
+    <div class="col-sm d-flex flex-column align-items-center justify-content-start">
+      <div class="section EBRW">
+        SAT EBRW
+      </div>
+      <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+        style="height: 546px; padding: 20px;">
+        700
+      </div>
+    </div>
+    <div class="col-sm d-flex flex-column align-items-center justify-content-start">
+      <div class="section math">
+        SAT Math
+      </div>
+      <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+        style="height: 546px; padding: 20px;">
+        700
+      </div>
+    </div>
+    <div class="col-sm d-flex flex-column align-items-center justify-content-start">
+      <div class="section total">
+        SAT Total
+      </div>
+      <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+        style="height: 546px; padding: 20px;">
+        1400
+      </div>
+    </div>
+  </div>
+  <div class="container" id="userDashboard">
+    <div class="row">
+      <div class="col-sm">
+        <canvas id="ebrwChart"></canvas>
+      </div>
+      <div class="col-sm">
+        <canvas id="mathChart"></canvas>
+      </div>
+      <div class="col-sm">
+        <canvas id="totalChart"></canvas>
+      </div>
+    </div>
+  </div>
+  
+  </main>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart_data.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li, a {
+  color: #221759;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdfdfd;
+  font-family: "SF Pro Display", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two columns with flexbox */
+.row {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.left {
+  flex: 1;
+  padding: 40px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right {
+  flex: 1;
+}
+
+/* Header styles */
+.header {
+  line-height: 1;
+  color: #221759;
+  font-size: 14vw;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.headerDesc {
+  margin-top: 30px;
+  color: #221759;
+  font-size: 2vw;
+  max-width: 75%;
+  margin-right: auto;
+  font-weight: normal;
+}
+
+/* Title styles */
+.title {
+  font-size: 5.5vw;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+/* Form styles */
+.sign-up__form {
+  width: 100%;
+  max-width: 416px;
+  margin-bottom: 24px;
+}
+
+/* Button styles */
+.buttons {
+  border-radius: 17px;
+  width: 100%;
+  height: 60px;
+  margin: 7px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start {
+  border: 5px solid #94BBD3;
+  border-bottom: 5px solid #80ABC6;
+  background: #94BBD3;
+  color: white;
+}
+
+.log-in {
+  border: 2px solid #F0EEE9;
+  border-bottom: 5px solid #F0EEE9;
+  background: #ffffff;
+  color: #80ABC6;
+}
+
+
+/* Image styles */
+.header-image {
+  margin: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .left, .right {
+      width: 100%;
+      padding: 20px;
+
+      margin-left: 0px;
+  }
+
+  .title {
+      font-size: 55px;
+      text-align: center;
+  }
+
+  .buttons {
+      width: 100%;
+
+  }
+
+  .header-image {
+    margin: 0px;
+    margin: auto;
+  }
+}

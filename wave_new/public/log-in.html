@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="log-in_styles.css">
+    <title>Pear</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="facebook_login.js"></script>
+
+
+</head>
+<body>
+    <main>
+        <h1 class="title"><img src="../statics/welcome-back.png" style="margin: 10px;">Welcome <span class="back">Back</span><span style="color: #DDBFE2;">!</span></h1>
+        <form class="login" action="/login" method="post">
+            <div>
+                <input type="username" id="username" name="username" placeholder="example@outlook.com" required>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="password" required>
+            </div>
+            <button class="submit" type="submit">Log In</button>
+        </form>
+
+        <h5 class="or">or</h5>
+
+        <form class="external-methods" action="Home.html", method="get">
+            <button class="external" onclick="facebookLogin()" type="button" style="color: #1877F2;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                    <path d="M22 11.5703C22 5.18023 17.0751 0 11 0C4.92491 0 0 5.18014 0 11.5703C0 17.3453 4.02256 22.132 9.28125 23V14.9148H6.48828V11.5703H9.28125V9.0212C9.28125 6.1214 10.9235 4.51964 13.4361 4.51964C14.6396 4.51964 15.8984 4.74562 15.8984 4.74562V7.593H14.5114C13.1448 7.593 12.7188 8.4849 12.7188 9.39995V11.5703H15.7695L15.2818 14.9148H12.7188V23C17.9774 22.132 22 17.3454 22 11.5703Z" fill="#1877F2"/>
+                </svg>
+            
+                Facebook
+            </button>
+            <button class="external" onclick="startGoogleSignIn()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M21.7861 8.84565H20.9V8.8H11V13.2H17.2167C16.3097 15.7613 13.8727 17.6 11 17.6C7.35515 17.6 4.4 14.6448 4.4 11C4.4 7.35515 7.35515 4.4 11 4.4C12.6825 4.4 14.2131 5.0347 15.3786 6.07145L18.4899 2.9601C16.5253 1.12915 13.8974 0 11 0C4.92525 0 0 4.92525 0 11C0 17.0747 4.92525 22 11 22C17.0748 22 22 17.0747 22 11C22 10.2624 21.9241 9.5425 21.7861 8.84565Z" fill="#FFC107"/>
+                    <path d="M1.26843 5.88005L4.88248 8.5305C5.86038 6.1094 8.22868 4.4 11.0001 4.4C12.6826 4.4 14.2132 5.0347 15.3787 6.07145L18.49 2.9601C16.5254 1.12915 13.8975 0 11.0001 0C6.77503 0 3.11093 2.38535 1.26843 5.88005Z" fill="#FF3D00"/>
+                    <path d="M10.9997 22C13.841 22 16.4227 20.9126 18.3746 19.1444L14.9701 16.2635C13.8286 17.1316 12.4338 17.6011 10.9997 17.6C8.13856 17.6 5.70921 15.7756 4.79401 13.2297L1.20691 15.9934C3.02741 19.5558 6.72451 22 10.9997 22Z" fill="#4CAF50"/>
+                    <path d="M21.786 8.84564H20.9V8.79999H11V13.2H17.2167C16.7828 14.419 16.0013 15.4842 14.9688 16.264L14.9704 16.2629L18.375 19.1438C18.1341 19.3627 22 16.5 22 11C22 10.2624 21.9241 9.54249 21.786 8.84564Z" fill="#1976D2"/>
+                </svg>
+            
+                Google
+            </button>
+        </form>
+
+        <p class="sign-up">Don't have an account yet? <a href='sign-up.html'style="font-weight: 600; cursor: pointer;">Sign Up</a></p>
+
+    </main>
+    <script src="login.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+      
+          // Your existing logic to fetch user credentials and send them to the server
+      
+          // Assuming you have the token after a successful login
+          const token = "jada"; // Replace with the actual token
+      
+          // Save the token to localStorage or sessionStorage
+          localStorage.setItem('token', token);
+      
+          // Redirect the user to the dashboard
+          window.location.href = '/dashboard';
+        });
+      </script>
+
+</body>
+</html>
+
+<!-- <script>
+        async function submitLoginForm(event) {
+          event.preventDefault(); // Prevent the default form submission
+      
+          // Collect form data
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+      
+          // Make a POST request to the server for authentication
+          try {
+              const response = await fetch('/login', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ username, password }),
+              });
+      
+              if (response.ok) {
+                  // If authentication is successful, parse the response JSON
+                  const data = await response.json();
+                  // Assuming you have some logic to handle the token, such as storing it in local storage
+                  // For example: localStorage.setItem('token', data.token);
+                  console.log('Login successful!');
+                  // Redirect or perform other actions as needed
+              } else {
+                  // If authentication fails, handle the error response
+                  const errorData = await response.json();
+                  console.error('Authentication failed:', errorData.error);
+                  // Display an error message or take appropriate action
+              }
+          } catch (error) {
+              console.error('Error during authentication:', error);
+              // Handle any other errors that might occur during the request
+          }
+        }
+      </script> -->

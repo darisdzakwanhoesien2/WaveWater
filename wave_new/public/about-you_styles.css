@@ -1,0 +1,134 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li, a {
+    color: #221759;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: #fdfdfd;
+    font-family: "SF Pro Display", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+.header {
+    line-height: 1;
+    color: #221759;
+    font-size: 14vw;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.headerDesc {
+    margin-top: 30px;
+    color: #221759;
+    font-size: 2vw;
+    max-width: 75%;
+    margin-right: auto;
+    font-weight: normal;
+}
+
+.title{
+    font-size: 4vw;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.back {
+    text-decoration: underline wavy #DDBFE2 4px;
+}
+
+.login {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 416px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+::placeholder {  /* similar to log-in styles without font-family  */
+    color: #878787;
+    font-size: 17px;
+    font-style: normal;
+    line-height: normal;
+}
+input, select {
+    border-radius: 17px;
+    border: 2px solid #EFEFEF;
+    background: #FBFBFB;
+    width: 405px;
+    height: 60px;
+    flex-shrink: 0;
+    padding: 20px;
+    margin: 7px;
+    width: 100%;
+}
+
+/* similar to log-in styles until this point  */
+
+.cc-selector-2 input{
+    display: none;
+    margin: 40px;
+}
+
+.student{background-image: url(../../statics/student.png);}
+.parent{background-image: url(../../statics/parents:guardian.png);}
+
+.cc-selector-2 input:active + .card, .cc-selector input:active + .card { opacity: .9; }
+.cc-selector-2 input:checked + .card, .cc-selector input:checked + .card {
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+}
+
+.card {
+    margin: 20px;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+    -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+    filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.card:hover {
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+
+.submit { /* similar to log-in_styles */
+    border-radius: 17px;
+    width: 100%;
+    border: 5px solid #94BBD3;
+    border-bottom: 5px solid #80ABC6;
+    background: #94BBD3;
+    width: 415px;
+    height: 60px;
+    flex-shrink: 0;
+    margin: 10px;
+    cursor: pointer;
+    
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 8.5vw;
+    }
+}

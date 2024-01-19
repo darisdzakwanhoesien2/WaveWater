@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        /* Add your CSS styles for the bar chart here */
+        .bar {
+            background-color: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+
+    <div id="chart"></div>
+
+    <h2>Sum of Data: <span id="sum"></span></h2>
+
+    <script>
+        // Sample dataset
+        const dataset = [10, 20, 60, 40, 50];
+
+        // Calculate the sum of the data
+        const sum = dataset.reduce((total, value) => total + value, 0);
+
+        // Display the sum on the page
+        document.getElementById('sum').textContent = sum;
+
+        // Create the bar chart
+        const chart = document.getElementById('chart');
+        dataset.forEach((value) => {
+            const bar = document.createElement('div');
+            bar.classList.add('bar');
+            bar.style.height = `${value}px`;
+            chart.appendChild(bar);
+        });
+    </script>
+</body>
+</html>

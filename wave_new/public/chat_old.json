@@ -1,0 +1,135 @@
+{
+  "requesterUsername": "darisdzakwanhoesien2",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/darisdzakwanhoesien2",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "$mid": 1,
+    "path": "/Users/darisdzakwanhoesien/.vscode/extensions/github.copilot-chat-0.6.0/assets/Copilot-chat-avatar.png",
+    "scheme": "file"
+  },
+  "welcomeMessage": [
+    "Welcome  **@darisdzakwanhoesien2**, I'm your Copilot and I'm here to help you get things done faster. I can identify issues, explain and even improve code.\n\nYou can ask generic questions, but what I'm really good at is helping you with your code. For example:",
+    [
+      {
+        "kind": "reply",
+        "message": "Generate unit tests for my code",
+        "metadata": {
+          "messageId": "welcome",
+          "suggestionId": "ea2c65c2-1bde-43ca-9962-8314404d4e1f",
+          "suggestionType": "Follow-up from model"
+        },
+        "title": "Generate unit tests for my code"
+      },
+      {
+        "kind": "reply",
+        "message": "Explain the selected code",
+        "metadata": {
+          "messageId": "welcome",
+          "suggestionId": "ab78eda1-de49-420f-a7cc-b5d0c3d7c719",
+          "suggestionType": "Follow-up from model"
+        },
+        "title": "Explain the selected code"
+      },
+      {
+        "kind": "reply",
+        "message": "Propose a fix for the bugs in my code",
+        "metadata": {
+          "messageId": "welcome",
+          "suggestionId": "e218c2f7-e74e-47a2-9c3f-0b3479a90c76",
+          "suggestionType": "Follow-up from model"
+        },
+        "title": "Propose a fix for the bugs in my code"
+      }
+    ],
+    "If you want to learn more about my capabilities and limitations, [check out the Copilot documentation](https://gh.io/copilotchatfaqs).",
+    "I'm powered by AI, so surprises and mistakes are possible. Make sure to verify any generated code or suggestions, and [share feedback](https://aka.ms/microsoft/vscode-copilot-release) so that we can learn and improve."
+  ],
+  "requests": [
+    {
+      "providerRequestId": "df335070-2e87-4e48-ac29-86bcf981f3cb",
+      "message": "Use SQLite, Express, Node, HTML, create consumption app with these information \n\n- User can register, login, logout\n- Create 5 user database with dummy time-series datasets\n- Each user will be tested to login, and each have their own account\n- Each account able to display dataset into bar chart and sum of the data\n\nCreate the code directory, pseudocode logic for these",
+      "response": "To create a consumption app with the given requirements, you can follow the steps below:\n\n1. Set up the project directory and install the necessary dependencies:\n   - Create a new directory for your project.\n   - Open a terminal and navigate to the project directory.\n   - Run the following command to initialize a new Node.js project:\n     ```\n     npm init -y\n     ```\n   - Install the required dependencies by running the following commands:\n     ```\n     npm install express sqlite3\n     ```\n\n2. Create the necessary files and folders:\n   - Create a `server.js` file in the project directory.\n   - Create a `views` folder in the project directory.\n   - Inside the `views` folder, create the following files:\n     - `register.html`\n     - `login.html`\n     - `dashboard.html`\n\n3. Set up the Express server in the `server.js` file:\n   ```javascript\n   const express = require('express');\n   const app = express();\n   const port = 3000;\n\n   // Set up middleware to parse request bodies\n   app.use(express.urlencoded({ extended: true }));\n   app.use(express.json());\n\n   // Define routes\n   app.get('/', (req, res) => {\n     res.sendFile(__dirname + '/views/register.html');\n   });\n\n   // Add more routes for login, dashboard, etc.\n\n   // Start the server\n   app.listen(port, () => {\n     console.log(`Server is running on http://localhost:${port}`);\n   });\n   ```\n\n4. Create the HTML templates in the `views` folder:\n   - `register.html`:\n     ```html\n     <!DOCTYPE html>\n     <html>\n       <head>\n         <title>Register</title>\n       </head>\n       <body>\n         <h1>Register</h1>\n         <!-- Add registration form -->\n       </body>\n     </html>\n     ```\n\n   - `login.html`:\n     ```html\n     <!DOCTYPE html>\n     <html>\n       <head>\n         <title>Login</title>\n       </head>\n       <body>\n         <h1>Login</h1>\n         <!-- Add login form -->\n       </body>\n     </html>\n     ```\n\n   - `dashboard.html`:\n     ```html\n     <!DOCTYPE html>\n     <html>\n       <head>\n         <title>Dashboard</title>\n       </head>\n       <body>\n         <h1>Dashboard</h1>\n         <!-- Add chart and sum of data display -->\n       </body>\n     </html>\n     ```\n\n5. Implement the registration and login functionality in the server:\n   - Add routes for registration and login in the `server.js` file.\n   - Use SQLite to store user information and time-series datasets.\n   - Implement the necessary logic to handle user registration and login.\n\n6. Implement the dashboard functionality:\n   - Add a route for the dashboard in the `server.js` file.\n   - Retrieve the user's time-series dataset from the SQLite database.\n   - Use a charting library (e.g., Chart.js) to display the dataset as a bar chart.\n   - Calculate the sum of the data and display it on the dashboard.\n\nPlease note that the above pseudocode provides a high-level overview of the steps involved in creating the consumption app. You will need to write the actual code to implement the functionality in each step.\n\n",
+      "followups": [
+        {
+          "kind": "reply",
+          "message": "How can I implement user authentication in the consumption app using SQLite and Express?",
+          "metadata": {
+            "messageId": "df335070-2e87-4e48-ac29-86bcf981f3cb",
+            "suggestionId": "fe78363e-79ef-42f2-96ae-595e2083dad9",
+            "suggestionType": "Follow-up from model"
+          },
+          "title": "How can I implement user authentication in the consumption app using SQLite and Express?"
+        }
+      ],
+      "isCanceled": false
+    },
+    {
+      "providerRequestId": "e97ff8cf-c6e8-455a-bbe2-dd179fc72096",
+      "message": "How can I implement user authentication in the consumption app using SQLite and Express?",
+      "response": "To implement user authentication in the consumption app using SQLite and Express, you can follow these steps:\n\n1. Set up the SQLite database:\n   - Create a new SQLite database file (e.g., `users.db`).\n   - Define a table to store user information, including fields like `id`, `username`, `password`, etc.\n   - Use an SQLite library (e.g., `sqlite3` module in Node.js) to connect to the database and execute queries.\n\n2. Create the registration functionality:\n   - Create a route in your Express server to handle user registration (e.g., `POST /register`).\n   - In the route handler, retrieve the registration data from the request body.\n   - Hash the user's password using a secure hashing algorithm (e.g., bcrypt) to store it securely in the database.\n   - Insert the user's information into the `users` table in the SQLite database.\n   - Return an appropriate response to the client (e.g., success message or error).\n\n3. Create the login functionality:\n   - Create a route in your Express server to handle user login (e.g., `POST /login`).\n   - In the route handler, retrieve the login data from the request body.\n   - Retrieve the user's information from the `users` table based on the provided username.\n   - Compare the hashed password stored in the database with the provided password using a secure hashing algorithm.\n   - If the passwords match, generate a JSON Web Token (JWT) to authenticate the user and include it in the response.\n   - Return the JWT to the client for subsequent authenticated requests or return an appropriate error message.\n\n4. Implement authentication middleware:\n   - Create a middleware function that can be used to protect routes that require authentication.\n   - In the middleware function, verify the JWT sent by the client.\n   - If the JWT is valid, extract the user information from it and attach it to the request object for further processing.\n   - If the JWT is invalid or expired, return an appropriate error response.\n\n5. Protect the routes that require authentication:\n   - Add the authentication middleware to the routes that require authentication.\n   - For example, if you have a route to display the user's dashboard, you can use the authentication middleware to ensure that only authenticated users can access it.\n\nBy following these steps, you can implement user authentication in your consumption app using SQLite and Express. Remember to handle errors, validate user input, and follow security best practices to ensure the authentication process is secure.\n\n",
+      "followups": [
+        {
+          "kind": "reply",
+          "message": "How can I securely store and compare passwords in the SQLite database for user authentication?",
+          "metadata": {
+            "messageId": "e97ff8cf-c6e8-455a-bbe2-dd179fc72096",
+            "suggestionId": "25b7eb06-2432-40fc-88b4-0015939972d6",
+            "suggestionType": "Follow-up from model"
+          },
+          "title": "How can I securely store and compare passwords in the SQLite database for user authentication?"
+        }
+      ],
+      "isCanceled": false
+    }
+  ],
+  "providerId": "copilot",
+  "providerState": {
+    "turns": [
+      {
+        "request": {
+          "message": "Use SQLite, Express, Node, HTML, create consumption app with these information \n\n- User can register, login, logout\n- Create 5 user database with dummy time-series datasets\n- Each user will be tested to login, and each have their own account\n- Each account able to display dataset into bar chart and sum of the data\n\nCreate the code directory, pseudocode logic for these",
+          "type": "user"
+        },
+        "status": "success",
+        "contextParts": [
+          {
+            "promptPart": "relevant information about vs code commands and settings:\nThe current question is related to VS Code with a focus on commands and settings. The application is currently open.\nIf a command or setting is not a valid answer, but it still relates to VS Code, please still respond.\nPlease do not guess a response and instead just respond with a polite apology if you are unsure.\nIf you believe the given context given to you is incorrect or not relevant you may ignore it.\nAt the end of your response, you must include a section wrapped with [COMMANDS START] and [COMMANDS END] that lists all commands you referenced in your response\nThe user cannot see the context you are given, so you must not mention it. If you want to refer to it, you must include it in your reply.\n\n\nBelow is a list of commands and settings we found which might be relevant to the question. For view related commands \"Toggle\" often means Show or Hide. A setting may reference another setting, that will appear as `#setting.id#`, you must return the referenced setting as well. You may use this context to help you formulate your response, but are not required to.Here are some possible commands:\n- SQLite: Use Database (\"sqlite.useDatabase\") (Keybinding: \"Not set\")\n- SQLite: Open Database (\"sqlite.explorer.add\") (Keybinding: \"Not set\")\n- Developer: Log Storage Database Contents (\"workbench.action.logStorage\") (Keybinding: \"Not set\")\n- SQLite: Run Query (\"sqlite.runDocumentQuery\") (Keybinding: \"⇧⌘Q\")\n- SQLite: Quick Query (\"sqlite.quickQuery\") (Keybinding: \"Not set\")\n\nHere are some possible settings:\nSetting Id: sqlite.setupDatabase\nType: object\nDescription: SQL query to execute every time a database is opened.\n\n\nSetting Id: sqlite.sqlite3\nType: string\nDescription: SQLite3 command or executable path.\n\n\nSetting Id: liveServer.settings.useWebExt\nType: boolean\nDescription: You have to install a browser extension. That will be works for your dynamic pages (like PHP).\n\n\nSetting Id: sqlite.logLevel\nType: string\nDescription: Logging level in the output channel (DEBUG, INFO, WARN, ERROR)\nPossible values:\n - DEBUG - \n - INFO - \n - WARN - \n - ERROR - \n\n\nSetting Id: sqlite.databaseExtensions\nType: array\nDescription: The file extensions recognized as SQLite database.\n\n",
+            "kind": "vscode"
+          },
+          {
+            "promptPart": "Active selection:\n\n\nFrom the file: about-you_styles.css\n```css\n/* Reset default browser styles */\nbody, h1, h2, h3, p, ul, li, a {\n    color: #221759;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #fdfdfd;\n    font-family: \"SF Pro Display\", Arial, sans-serif;\n}\n\n* {\n    box-sizing: border-box;\n  }\n  \n.header {\n    line-height: 1;\n    color: #221759;\n    font-size: 14vw;\n    font-weight: 600;\n    margin: 10px 0;\n}\n\n.headerDesc {\n    margin-top: 30px;\n    color: #221759;\n    font-size: 2vw;\n    max-width: 75%;\n    margin-right: auto;\n    font-weight: normal;\n}\n\n.title{\n    font-size: 4vw;\n    margin-top: 50px;\n    margin-bottom: 35px;\n    text-align: center;\n}\n\n.back {\n    text-decoration: underline wavy #DDBFE2 4px;\n}\n\n.login {\n    margin: 0 auto;\n    width: 100%;\n    max-width: 416px;\n    margin-bottom: 24px;\n    text-align: center;\n}\n\n::placeholder {  /* similar to log-in styles without font-family  */\n    color: #878787;\n    font-size: 17px;\n    font-style: normal;\n    line-height: normal;\n}\ninput, select {\n    border-radius: 17px;\n    border: 2px solid #EFEFEF;\n    background: #FBFBFB;\n    width: 405px;\n    height: 60px;\n    flex-shrink: 0;\n    padding: 20px;\n    margin: 7px;\n    width: 100%;\n}\n\n/* similar to log-in styles until this point  */\n\n.cc-selector-2 input{\n    display: none;\n    margin: 40px;\n}\n\n.student{background-image: url(../../statics/student.png);}\n.parent{background-image: url(../../statics/parents:guardian.png);}\n\n.cc-selector-2 input:active + .card, .cc-selector input:active + .card { opacity: .9; }\n.cc-selector-2 input:checked + .card, .cc-selector input:checked + .card {\n    -webkit-filter: none;\n    -moz-filter: none;\n    filter: none;\n}\n\n.card {\n    margin: 20px;\n    cursor: pointer;\n    background-size: contain;\n    background-repeat: no-repeat;\n    display: inline-block;\n    width: 120px;\n    height: 120px;\n    -webkit-transition: all 100ms ease-in;\n    -moz-transition: all 100ms ease-in;\n    transition: all 100ms ease-in;\n    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);\n    -moz-filter: brightness(1.8) grayscale(1) opacity(.7);\n    filter: brightness(1.8) grayscale(1) opacity(.7);\n}\n.card:hover {\n    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);\n    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);\n    filter: brightness(1.2) grayscale(.5) opacity(.9);\n}\n\n\n.submit { /* similar to log-in_styles */\n    border-radius: 17px;\n    width: 100%;\n    border: 5px solid #94BBD3;\n    border-bottom: 5px solid #80ABC6;\n    background: #94BBD3;\n    width: 415px;\n    height: 60px;\n    flex-shrink: 0;\n    margin: 10px;\n    cursor: pointer;\n    \n    font-size: 17px;\n    color: #ffffff;\n    font-weight: 600;\n}\n\n@media (max-width: 600px) {\n\n    .title {\n        font-size: 8.5vw;\n    }\n}\n```\n\n",
+            "kind": "current-selection"
+          }
+        ],
+        "requestId": "df335070-2e87-4e48-ac29-86bcf981f3cb",
+        "response": {
+          "message": "To create a consumption app with the given requirements, you can follow the steps below:\n\n1. Set up the project directory and install the necessary dependencies:\n   - Create a new directory for your project.\n   - Open a terminal and navigate to the project directory.\n   - Run the following command to initialize a new Node.js project:\n     ```\n     npm init -y\n     ```\n   - Install the required dependencies by running the following commands:\n     ```\n     npm install express sqlite3\n     ```\n\n2. Create the necessary files and folders:\n   - Create a `server.js` file in the project directory.\n   - Create a `views` folder in the project directory.\n   - Inside the `views` folder, create the following files:\n     - `register.html`\n     - `login.html`\n     - `dashboard.html`\n\n3. Set up the Express server in the `server.js` file:\n   ```javascript\n   const express = require('express');\n   const app = express();\n   const port = 3000;\n\n   // Set up middleware to parse request bodies\n   app.use(express.urlencoded({ extended: true }));\n   app.use(express.json());\n\n   // Define routes\n   app.get('/', (req, res) => {\n     res.sendFile(__dirname + '/views/register.html');\n   });\n\n   // Add more routes for login, dashboard, etc.\n\n   // Start the server\n   app.listen(port, () => {\n     console.log(`Server is running on http://localhost:${port}`);\n   });\n   ```\n\n4. Create the HTML templates in the `views` folder:\n   - `register.html`:\n     ```html\n     <!DOCTYPE html>\n     <html>\n       <head>\n         <title>Register</title>\n       </head>\n       <body>\n         <h1>Register</h1>\n         <!-- Add registration form -->\n       </body>\n     </html>\n     ```\n\n   - `login.html`:\n     ```html\n     <!DOCTYPE html>\n     <html>\n       <head>\n         <title>Login</title>\n       </head>\n       <body>\n         <h1>Login</h1>\n         <!-- Add login form -->\n       </body>\n     </html>\n     ```\n\n   - `dashboard.html`:\n     ```html\n     <!DOCTYPE html>\n     <html>\n       <head>\n         <title>Dashboard</title>\n       </head>\n       <body>\n         <h1>Dashboard</h1>\n         <!-- Add chart and sum of data display -->\n       </body>\n     </html>\n     ```\n\n5. Implement the registration and login functionality in the server:\n   - Add routes for registration and login in the `server.js` file.\n   - Use SQLite to store user information and time-series datasets.\n   - Implement the necessary logic to handle user registration and login.\n\n6. Implement the dashboard functionality:\n   - Add a route for the dashboard in the `server.js` file.\n   - Retrieve the user's time-series dataset from the SQLite database.\n   - Use a charting library (e.g., Chart.js) to display the dataset as a bar chart.\n   - Calculate the sum of the data and display it on the dashboard.\n\nPlease note that the above pseudocode provides a high-level overview of the steps involved in creating the consumption app. You will need to write the actual code to implement the functionality in each step.\n\n[COMMANDS START]\n- SQLite: Use Database (\"sqlite.useDatabase\")\n- SQLite: Open Database (\"sqlite.explorer.add\")\n- Developer: Log Storage Database Contents (\"workbench.action.logStorage\")\n- SQLite: Run Query (\"sqlite.runDocumentQuery\")\n- SQLite: Quick Query (\"sqlite.quickQuery\")\n[COMMANDS END]",
+          "type": "model"
+        }
+      },
+      {
+        "request": {
+          "message": "How can I implement user authentication in the consumption app using SQLite and Express?",
+          "type": "follow-up"
+        },
+        "status": "success",
+        "contextParts": [
+          {
+            "promptPart": "Active selection:\n\n\nFrom the file: about-you_styles.css\n```css\n/* Reset default browser styles */\nbody, h1, h2, h3, p, ul, li, a {\n    color: #221759;\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    text-align: center;\n}\n\nbody {\n    background-color: #fdfdfd;\n    font-family: \"SF Pro Display\", Arial, sans-serif;\n}\n\n* {\n    box-sizing: border-box;\n  }\n  \n.header {\n    line-height: 1;\n    color: #221759;\n    font-size: 14vw;\n    font-weight: 600;\n    margin: 10px 0;\n}\n\n.headerDesc {\n    margin-top: 30px;\n    color: #221759;\n    font-size: 2vw;\n    max-width: 75%;\n    margin-right: auto;\n    font-weight: normal;\n}\n\n.title{\n    font-size: 4vw;\n    margin-top: 50px;\n    margin-bottom: 35px;\n    text-align: center;\n}\n\n.back {\n    text-decoration: underline wavy #DDBFE2 4px;\n}\n\n.login {\n    margin: 0 auto;\n    width: 100%;\n    max-width: 416px;\n    margin-bottom: 24px;\n    text-align: center;\n}\n\n::placeholder {  /* similar to log-in styles without font-family  */\n    color: #878787;\n    font-size: 17px;\n    font-style: normal;\n    line-height: normal;\n}\ninput, select {\n    border-radius: 17px;\n    border: 2px solid #EFEFEF;\n    background: #FBFBFB;\n    width: 405px;\n    height: 60px;\n    flex-shrink: 0;\n    padding: 20px;\n    margin: 7px;\n    width: 100%;\n}\n\n/* similar to log-in styles until this point  */\n\n.cc-selector-2 input{\n    display: none;\n    margin: 40px;\n}\n\n.student{background-image: url(../../statics/student.png);}\n.parent{background-image: url(../../statics/parents:guardian.png);}\n\n.cc-selector-2 input:active + .card, .cc-selector input:active + .card { opacity: .9; }\n.cc-selector-2 input:checked + .card, .cc-selector input:checked + .card {\n    -webkit-filter: none;\n    -moz-filter: none;\n    filter: none;\n}\n\n.card {\n    margin: 20px;\n    cursor: pointer;\n    background-size: contain;\n    background-repeat: no-repeat;\n    display: inline-block;\n    width: 120px;\n    height: 120px;\n    -webkit-transition: all 100ms ease-in;\n    -moz-transition: all 100ms ease-in;\n    transition: all 100ms ease-in;\n    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);\n    -moz-filter: brightness(1.8) grayscale(1) opacity(.7);\n    filter: brightness(1.8) grayscale(1) opacity(.7);\n}\n.card:hover {\n    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);\n    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);\n    filter: brightness(1.2) grayscale(.5) opacity(.9);\n}\n\n\n.submit { /* similar to log-in_styles */\n    border-radius: 17px;\n    width: 100%;\n    border: 5px solid #94BBD3;\n    border-bottom: 5px solid #80ABC6;\n    background: #94BBD3;\n    width: 415px;\n    height: 60px;\n    flex-shrink: 0;\n    margin: 10px;\n    cursor: pointer;\n    \n    font-size: 17px;\n    color: #ffffff;\n    font-weight: 600;\n}\n\n@media (max-width: 600px) {\n\n    .title {\n        font-size: 8.5vw;\n    }\n}\n```\n\n",
+            "kind": "current-selection"
+          }
+        ],
+        "requestId": "e97ff8cf-c6e8-455a-bbe2-dd179fc72096",
+        "response": {
+          "message": "To implement user authentication in the consumption app using SQLite and Express, you can follow these steps:\n\n1. Set up the SQLite database:\n   - Create a new SQLite database file (e.g., `users.db`).\n   - Define a table to store user information, including fields like `id`, `username`, `password`, etc.\n   - Use an SQLite library (e.g., `sqlite3` module in Node.js) to connect to the database and execute queries.\n\n2. Create the registration functionality:\n   - Create a route in your Express server to handle user registration (e.g., `POST /register`).\n   - In the route handler, retrieve the registration data from the request body.\n   - Hash the user's password using a secure hashing algorithm (e.g., bcrypt) to store it securely in the database.\n   - Insert the user's information into the `users` table in the SQLite database.\n   - Return an appropriate response to the client (e.g., success message or error).\n\n3. Create the login functionality:\n   - Create a route in your Express server to handle user login (e.g., `POST /login`).\n   - In the route handler, retrieve the login data from the request body.\n   - Retrieve the user's information from the `users` table based on the provided username.\n   - Compare the hashed password stored in the database with the provided password using a secure hashing algorithm.\n   - If the passwords match, generate a JSON Web Token (JWT) to authenticate the user and include it in the response.\n   - Return the JWT to the client for subsequent authenticated requests or return an appropriate error message.\n\n4. Implement authentication middleware:\n   - Create a middleware function that can be used to protect routes that require authentication.\n   - In the middleware function, verify the JWT sent by the client.\n   - If the JWT is valid, extract the user information from it and attach it to the request object for further processing.\n   - If the JWT is invalid or expired, return an appropriate error response.\n\n5. Protect the routes that require authentication:\n   - Add the authentication middleware to the routes that require authentication.\n   - For example, if you have a route to display the user's dashboard, you can use the authentication middleware to ensure that only authenticated users can access it.\n\nBy following these steps, you can implement user authentication in your consumption app using SQLite and Express. Remember to handle errors, validate user input, and follow security best practices to ensure the authentication process is secure.\n\n[COMMANDS START]\n- SQLite: Create Table (\"sqlite.runQuery\")\n- SQLite: Insert Data (\"sqlite.runQuery\")\n- SQLite: Select Data (\"sqlite.runQuery\")\n- SQLite: Update Data (\"sqlite.runQuery\")\n- SQLite: Delete Data (\"sqlite.runQuery\")\n- Express: Create Route (\"express.createRoute\")\n- Express: Handle POST Request (\"express.handlePostRequest\")\n- Express: Handle GET Request (\"express.handleGetRequest\")\n- Express: Use Middleware (\"express.useMiddleware\")\n[COMMANDS END]",
+          "type": "model"
+        }
+      }
+    ]
+  }
+}

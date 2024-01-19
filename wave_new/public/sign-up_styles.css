@@ -1,0 +1,92 @@
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li, a {
+    color: #221759;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: #fdfdfd;
+    font-family: "SF Pro Display", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+.header {
+    line-height: 1;
+    color: #221759;
+    font-size: 14vw;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.headerDesc {
+    margin-top: 30px;
+    color: #221759;
+    font-size: 2vw;
+    max-width: 75%;
+    margin-right: auto;
+    font-weight: normal;
+}
+
+.title{
+    font-size: 4vw;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.create {
+    text-decoration: underline wavy #A9CBB7 4px;
+}
+
+.or {
+    color: #BEBEBE;
+    font-size: 17px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.external {
+    border-radius: 17px;
+    width: 100%;
+    width: 533px;
+    height: 58px;
+    flex-shrink: 0;
+    margin: 4px;
+    border: 2px solid #EFEFEF;
+    border-bottom: 5px solid #EFEFEF;
+    background: #ffffff;
+    color: #80ABC6;
+    font-size: 17px;
+    color: #43403F;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.external svg {
+    width: 22px; /* Adjust the width of the SVG icon as needed */
+    height: 22px; /* Adjust the height of the SVG icon as needed */
+}
+
+.sign-up {
+    color: #8E8E8E;
+    font-size: 18px;
+    margin: 50px;
+}
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 10vw;
+    }
+
+    button {
+        width: 65%; /* Make inputs full-width on smaller screens */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="sat-prep_styles.css">
+  <link rel="icon" type="image/png" href="../../statics/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <title>SAT - Pear</title>
+
+</head>
+
+<body>
+  <div id="nav-placeholder"></div>
+  <main style="padding-top: 100px; width: 100vw;">
+
+    <div id="details" class="content" style="overflow-y: scroll; height: 100vh;">
+      <div class="container">
+        <h1 class="title" style="max-width: 100%;">your test progress</h1>
+        <div class="row">
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start">
+            <div class="section EBRW">
+              SAT EBRW
+            </div>
+            <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+              style="height: 546px; padding: 20px;">
+              700
+            </div>
+          </div>
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start">
+            <div class="section math">
+              SAT Math
+            </div>
+            <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+              style="height: 546px; padding: 20px;">
+              700
+            </div>
+          </div>
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start">
+            <div class="section total">
+              SAT Total
+            </div>
+            <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+              style="height: 546px; padding: 20px;">
+              1400
+            </div>
+          </div>
+        </div>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="container">
+        <h3 class="subtitle">knowledge skill</h3>
+        <div class="row">
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+            style="height: 546px; padding: 20px;">
+            <h2>EBRW</h2>
+            <!-- <div id="barChart"></div> -->
+          </div>
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+            style="height: 546px; padding: 20px;">
+            <h2>MATH</h2>
+            <!-- <div id="mathChart"></div> -->
+          </div>
+          <div class="w-100"></div>
+        </div>
+      </div>
+
+      <hr style="width: 80%;">
+
+      <h3 class="subtitle">so, how have I done?</h3>
+      <p>(insights concluded for all tests)</p>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+            style="background-color: white; border: 0px; height: 300px;">
+            <img src="../../statics/SAT_ImprovedIcon.png" style="margin: 30px;">
+            <h5>you have improved the most on</h5>
+            <h4 style="font-weight: 600;">Problem-Solving and Data Analysis</h4>
+          </div>
+
+          <div class="col-sm d-flex flex-column align-items-center justify-content-start"
+            style="background-color: white; border: 0px; height: 300px;">
+            <img src="../../statics/SAT_ConfusedIcon.png" style="margin: 30px;">
+            <h5>you seem to be a bit confused with</h5>
+            <h4 style="font-weight: 600;">Expression of ideas</h4>
+          </div>
+        </div>
+      </div>
+
+      <div>
+      </div>
+    </div>
+
+    <!-- <div id="others" class="content">
+          <h2>Test Yuhuu</h2>
+        </div> -->
+    </div>
+
+  </main>
+
+  <script src="sat-prep_script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("navbar.html");
+    });
+
+    console.log("run")
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="display.js"></script>
+  <script src="bar_chart_testing.js"></script>
+
+
+</body>
+
+</html>

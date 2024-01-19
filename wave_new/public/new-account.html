@@ -1,0 +1,26 @@
+<!-- /publics/new-account.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="new-account_styles.css"> <!-- Changed href to point to the correct CSS file -->
+    <title>Pear</title>
+</head>
+<body>    
+    <main>
+        <h1 class="title"><img src="../statics/have-an-account.png" style="margin: 10px;">Welcome <span class="back">to PEAR</span><span style="color: #DDBFE2;">!</span></h1>
+        <form class="login" action="/register" method="post"> <!-- Changed the action URL to /register -->
+            <div>
+                <!-- <label for="username">Email:</label> -->
+                <input type="text" id="username" name="username" placeholder="example@outlook.com" required>
+            </div>
+            <div>
+                <!-- <label for="password">Password:</label> -->
+                <input type="password" id="password" name="password" placeholder="password" required>
+            </div>
+            <button class="submit" type="submit">Register</button>
+        </form>
+    </main>
+</body>
+</html>
